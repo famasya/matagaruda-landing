@@ -2,3 +2,8 @@
   command = "npm run build && npm run export"
   base = "release/"
   publish = "out/"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-XSS-Protection = "1; mode=block"
