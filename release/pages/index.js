@@ -24,7 +24,7 @@ export default function Home() {
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <Link href="/posts/first-post">
+          <Link href="/first-post">
             <a className="card">
               <h3>Go To &rarr;</h3>
               <p>First Post</p>
