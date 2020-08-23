@@ -4,10 +4,10 @@ export async function getAllPostIds() {
   const remoteData = await fetch(`${process.env.WP_BASE}/posts`);
   const posts = await remoteData.json();
 
-  return posts.posts.map((post) => {
+  return posts.map((post) => {
     return {
       params: {
-        id: `${post.ID.toString()}-${post.slug}`,
+        id: `${post.id.toString()}-${post.slug}`,
       },
     };
   });

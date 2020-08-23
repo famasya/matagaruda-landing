@@ -8,10 +8,10 @@ class Posts extends React.Component {
         {this.props.posts.map(function (post, idx) {
           return (
             <div key={idx}>
-              <Link href="/post/[id]" as={`/post/${post.ID}-${post.slug}`}>
-                <h3>{post.title}</h3>
+              <Link href="/post/[id]" as={`/post/${post.id}-${post.slug}`}>
+                <h3>{post.title.rendered}</h3>
               </Link>
-              {ReactHtmlParser(post.excerpt)}
+              {ReactHtmlParser(post.excerpt.rendered)}
             </div>
           );
         })}

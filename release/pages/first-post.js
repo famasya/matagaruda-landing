@@ -6,8 +6,7 @@ const Post = (props) => (
   <Layout>
     <div>
       <h1>First Page</h1>
-      <p>Posts count : {props.data.found}</p>
-      <Posts posts={props.data.posts} />
+      <Posts posts={props.posts} />
     </div>
   </Layout>
 );
@@ -18,7 +17,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data,
+      posts: data,
     },
   };
 }

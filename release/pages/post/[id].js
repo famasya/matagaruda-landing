@@ -6,8 +6,8 @@ import ReactHtmlParser from "react-html-parser";
 const PostItem = (props) => {
   return (
     <Layout>
-      <h3>Title: {props.data.title}</h3>
-      {ReactHtmlParser(props.data.excerpt)}
+      <h3>Title: {props.data.title.rendered}</h3>
+      {ReactHtmlParser(props.data.content.rendered)}
     </Layout>
   );
 };
